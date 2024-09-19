@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  banking-app:
+    image: banking
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=dev
+      - sortcode = 135513
+      - SERVER_PORT = 8081
+      # - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/postgres
+      # - SPRING_DATASOURCE_USERNAME=user
+      # - SPRING_DATASOURCE_PASSWORD=1010
+
+    ports:
+      - 127.0.0.1:8081:8080
